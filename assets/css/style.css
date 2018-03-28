@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/902b65029f9161f215bbae807a1cb659.jpg");
+}
+
+trivia {
+    display: block;
+    background-color: yellow;
+    text-align: center;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+}
