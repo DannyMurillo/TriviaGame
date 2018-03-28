@@ -6,72 +6,23 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="assets/javascript/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <container>
-        <trivia>
-            <h1>Totally Trivial Trivia!!!</h1>
-            <hr>
-            <p id = "timer"></p>
-            <div id = "showAnswers"></div>
-            <form name = "trivaQs" onsubmit = "return answers()">
-                <h3>1. Who is the last Premier League team to go undefeated?</h3>
-                <input type = "radio" name = "q1" value ="a" id ="q1a">a. &lt;Arsenal&gt;<br>
-                <input type = "radio" name = "q1" value ="b" id ="q1b">b. &lt;Manchester United&gt;<br>
-                <input type = "radio" name = "q1" value ="c" id ="q1c">c. &lt;Manchester City&gt;<br>
-                <input type = "radio" name = "q1" value ="d" id ="q1d">d. &lt;Liverpool&gt;<br>
-
-                <h3>2. Who is the most recent player to average a triple double in the regular NBA season?</h3>
-                <input type = "radio" name = "q2" value ="a" id ="q2a">a. &lt;Lebron James&gt;<br>
-                <input type = "radio" name = "q2" value ="b" id ="q2b">b. &lt;Kobe Bryant&gt;<br>
-                <input type = "radio" name = "q2" value ="c" id ="q2c">c. &lt;Russell Westbrook&gt;<br>
-                <input type = "radio" name = "q2" value ="d" id ="q2d">c. &lt;James Harden&gt;<br>
-
-                <h3>3. Which WWE wrestler is not a big movie actor today?</h3>
-                <input type = "radio" name = "q3" value ="a" id ="q3a">a. &lt;John Cena&gt;<br>
-                <input type = "radio" name = "q3" value ="b" id ="q3b">b. &lt;Dwayne "The Rock" Johnson&gt;<br>
-                <input type = "radio" name = "q3" value ="c" id ="q3c">c. &lt;Batista&gt;<br>
-                <input type = "radio" name = "q3" value ="d" id ="q3d">d. &lt;Rey Mysterio&gt;<br>
-
-                <h3>4. Which NALCS team is the first to knockout TSM out of the playoffs in a round that is not the final? </h3>
-                <input type = "radio" name = "q4" value ="a" id ="q4a">a. &lt;Optic Gaming&gt;<br>
-                <input type = "radio" name = "q4" value ="b" id ="q4b">b. &lt;Counter Logic Gaming&gt;<br>
-                <input type = "radio" name = "q4" value ="c" id ="q4c">c. &lt;Team Liquid&gt;<br>
-                <input type = "radio" name = "q4" value ="d" id ="q4d">d. &lt;Cloud 9&gt;<br>
-
-                <h3>5. Who won the last World Cup in 2014?</h3>
-                <input type = "radio" name = "q5" value ="a" id ="q5a">a. &lt;France&gt;<br>
-                <input type = "radio" name = "q5" value ="b" id ="q5b">b. &lt;Germany&gt;<br>
-                <input type = "radio" name = "q5" value ="c" id ="q5c">c. &lt;Italy&gt;<br>
-                <input type = "radio" name = "q5" value ="d" id ="q5d">d. &lt;USMNT&gt;<br>
-
-                <h3>6. What type of bear is best?</h3>
-                <input type = "radio" name = "q6" value ="a" id ="q6a">a. &lt;Brown Bear&gt;<br>
-                <input type = "radio" name = "q6" value ="b" id ="q6b">b. &lt;Panda&gt;<br>
-                <input type = "radio" name = "q6" value ="c" id ="q6c">c. &lt;Polar Bear&gt;<br>
-                <input type = "radio" name = "q6" value ="d" id ="q6d">d. &lt;False, Black Bear&gt;<br>
-
-                <h3>7. What is the best movie of ALL TIME?</h3>
-                <input type = "radio" name = "q7" value ="a" id ="q7a">a. &lt;Shrek&gt;<br>
-                <input type = "radio" name = "q7" value ="b" id ="q7b">b. &lt;Shrek 2&gt;<br>
-                <input type = "radio" name = "q7" value ="c" id ="q7c">c. &lt;Shrek the Third&gt;<br>
-                <input type = "radio" name = "q7" value ="d" id ="q7d">d. &lt;All of the above&gt;<br>
-
-                <h3>8. What was the most played Esport in 2017?</h3>
-                <input type = "radio" name = "q8" value ="a" id ="q8a">a. &lt;League of Legends&gt;<br>
-                <input type = "radio" name = "q8" value ="b" id ="q8b">b. &lt;Overwatch&gt;<br>
-                <input type = "radio" name = "q8" value ="c" id ="q8c">c. &lt;Counter-Strike: Global Offensive&gt;<br>
-                <input type = "radio" name = "q8" value ="d" id ="q8d">d. &lt;Dota 2&gt;<br>
-
-                <h3>9. What was the highest grossing movie of 2017?</h3>
-                <input type = "radio" name = "q9" value ="a" id ="q9a">a. &lt;Spider-Man Homecoming&gt;<br>
-                <input type = "radio" name = "q9" value ="b" id ="q9b">b. &lt;Wonder Woman&gt;<br>
-                <input type = "radio" name = "q9" value ="c" id ="q9c">c. &lt;Star Wars: Episode 8&gt;<br>
-                <input type = "radio" name = "q9" value ="d" id ="q9d">d. &lt;Fast and Furious 8&gt;<br>
-            </form>
-        </trivia>
-    </container>
+    <div class ="container">
+    <div class ="jumbotron">
+        <h1>TOTALLY TRIVIAL TRIVIA!!!</h1>
+        <div class="quiz-container">
+            <div id="timer"></div>
+            <div id="quiz"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+    </div>
+    </div>
 </body>
 </html>l
