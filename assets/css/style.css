@@ -3,7 +3,7 @@ body {
 }
 
 .container{
-	height: 330px;
+	height: 360px;
 	width: 1000px;
 	position: absolute;
 	top:50%;
@@ -18,9 +18,15 @@ body {
 .title{
 	padding-top: 20px;
 	text-align: center;
-	font-size: 36px;
+	font-size: 45px;
 	text-transform: uppercase;
 	color: #08038C;
+}
+
+#timer {
+    text-align: center;
+    font-size: 25px; 
+    
 }
 
 .question{
@@ -75,3 +81,4 @@ body {
 	background: #08038C;
 	color: #000;
 }
+

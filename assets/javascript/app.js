@@ -1,24 +1,19 @@
 //timer
 // this will take care of the seconds and minutes giving the user a 2 minute count 
-var totalSec = 120;
-var c_minutes = parseInt(totalSec/60);
-var c_seconds = parseInt(totalSec%60);
+var timeLeft = 30;
+var elem = document.getElementById('timer');
 
-function CheckTime () {
-    document.getElementById("timer").innerHTML = 'Time Left:' + c_minutes + 'minutes' + c_seconds + 'seconds';
+var timerId = setInterval(countdown, 1000);
 
-    if (totalSec === 0) {
-        setTimeout('document.quiz.submit()',1);
-    }
-    else {
-        totalSec = totalSec - 1;
-        var c_minutes = parseInt(totalSec/60);
-        var c_seconds = parseInt(totalSec%60);
-        setTimeout("CheckTime()",1000);
-    }
-};
-setTimeout("CheckTime()",1000);
-
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    doSomething();
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
 // all of the questions that will be used in the quiz
 var questions = [{
 	"question": "Who was the last team to go undefeated in the Premier League?",
@@ -105,6 +100,7 @@ var opt4 = document.getElementById('opt4');
 var nextButton = document.getElementById('nextButton');
 var resultCont = document.getElementById('result');
 
+// this grabs the question from the question array above and loads out the options too
 function loadQuestion (questionIndex) {
 	var q = questions[questionIndex];
 	questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
@@ -114,6 +110,7 @@ function loadQuestion (questionIndex) {
 	opt4.textContent = q.option4;
 };
 
+// this function allows us to move onto the next question
 function loadNextQuestion () {
 	var selectedOption = document.querySelector('input[type=radio]:checked');
 	if(!selectedOption){
@@ -121,15 +118,15 @@ function loadNextQuestion () {
 		return;
 	}
 	var answer = selectedOption.value;
-	if(questions[currentQuestion].answer == answer){
+	if(questions[currentQuestion].answer === answer){
 		score += 10;
 	}
 	selectedOption.checked = false;
 	currentQuestion++;
-	if(currentQuestion == totQuestions - 1){
+	if(currentQuestion === totQuestions - 1){
 		nextButton.textContent = 'Finish';
 	}
-	if(currentQuestion == totQuestions){
+	if(currentQuestion === totQuestions){
 		container.style.display = 'none';
 		resultCont.style.display = '';
 		resultCont.textContent = 'Your Score: ' + score;
@@ -137,5 +134,5 @@ function loadNextQuestion () {
 	}
 	loadQuestion(currentQuestion);
 }
-
+// declares the function to run
 loadQuestion(currentQuestion);
