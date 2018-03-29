@@ -6,19 +6,21 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="assets/javascript/app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-    <div class ="container">
-    <div class ="jumbotron">
-        <h1>TOTALLY TRIVIAL TRIVIA!!!</h1>
-        <div id="timer"></div>
-        <div id="quiz"></div>
-        <button id="submit">Get Results</button>
-        <div id="results"></div>   
-    </div>
-    </div>
+        <div id="quizContainer" class="container">
+                <div class="title">Computer Quiz</div>
+                <div id = "timer"></div>
+                <div id="question" class="question"></div>
+                <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+                <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+                <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+                <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+                <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
+            </div>
+            <div id="result" class="container result" style="display:none;">
+            </div>
 </body>
 </html>
