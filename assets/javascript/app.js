@@ -119,7 +119,7 @@ function loadNextQuestion () {
 	}
 	var answer = selectedOption.value;
 	if(questions[currentQuestion].answer === answer){
-		score += 10;
+		score++;
 	}
 	selectedOption.checked = false;
 	currentQuestion++;
